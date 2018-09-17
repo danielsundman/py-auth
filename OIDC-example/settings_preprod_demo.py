@@ -1,7 +1,7 @@
 # You need a certificate+key file to serve HTTPS. Use for instance let's encrypt. ! MUST CHANGE !
 CERT = {
-    'crt': '/path/to/cert.pem',
-    'key': '/path/to/privkey.pem'
+    'crt': './cert.pem',
+    'key': './privkey.pem'
 }
 # Settings for OIDC
 oidc = {

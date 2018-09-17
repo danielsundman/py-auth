@@ -22,7 +22,7 @@ def hello_world():
     state = ''.join(random.choice('ABCDEF0123456789') for _ in range(8))
     return render_template('intro.html', url_oidc=cfg.URI_OIDC.replace('ZTATE', state), state=state)
 
-@app.route('/consume')
+@app.route('/redirect')
 def eat():
     """ Function that consumes OIDC response.
         OIDC response is a GET request.
@@ -53,6 +53,7 @@ def eat():
         return render_template('error.html', err=uinfo['error_description'])
     # Find values, set them accordingly.
     print(uinfo)
+    print(token)
     if 'name' in uinfo:
         name = uinfo['name']
     if 'signicat.national_id' in uinfo:
