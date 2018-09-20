@@ -1,0 +1,23 @@
+<%- include('header') -%>
+
+<h3>
+	<% if (name.indexOf('Weasley') >= 0) { %>
+		<img src="https://dag.ninja/img/weas.jpeg">
+	<% } else if (name.indexOf('Daniel') >= 0) { %>
+		<img src="https://vignette.wikia.nocookie.net/uncyclopedia/images/1/17/Zoidberg.png">
+	<% } else if (name.indexOf('Dag') >= 0) { %>
+		<img src="https://i.pinimg.com/236x/51/0d/4f/510d4fa2a2924b969851b78a196a1239--joker-tv-series.jpg">
+	<% } else { %>
+		<img src="http://dag.ninja/img/success.jpeg">
+	<% } %>
+	<br>Welcome <%= method %>-authorized-person!
+</h3>
+<ul>
+	<li><b>Name: </b><%= name %>
+	<li><b>National ID: </b><%= national_id %>
+	<li><b>SUB: </b><%= sub %>
+</ul>
+<br><br>
+<a href="https://example.com" class="btn btn-warning" role="button"><i class="fa fa-undo"></i> Go again!</a>
+
+<%- include('footer') -%>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Signicat Implementation">
+  <meta name="author" content="DagCorp">
+
+  <title>Who???</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+  <!-- JS -->
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+  <script>
+    const state = "<%= state %>";
+    if (!window.location.href.includes("redirect")) {
+      Cookies.set('auth_state', state, { expires: 1/144, secure: true });
+    }
+  </script>
+  <style>
+	  body {
+		  background-color: <%= background %>;
+		  color: white;
+		  margin: 50px 0;
+	  }
+	  a {
+		  color: white;
+	  }
+    img {
+      height: 200px;
+      margin-right: 25px
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 mx-auto">
